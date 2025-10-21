@@ -1,0 +1,705 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    transition: .2s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#button {
+    width: 200px;
+    border: 1px solid #0866FF;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #0866FF;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #004fcf;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #0866FF;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin: 5px;
+
+    }
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0px;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    span {
+        color: #0866FF;
+    }
+
+    img {
+        width: 300px;
+        border-radius: 100%;
+        object-fit: cover;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    #icons-header a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #icons-header li {
+        border: 1px solid #0866FF;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+
+        &:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        span {
+            display: flex;
+            margin: 0px 5px;
+            color: black;
+        }
+
+    }
+
+    #linkedin:hover {
+        background-color: #126BC5;
+        border: 1px solid #126BC5;
+
+        span {
+            color: white;
+        }
+    }
+
+    #github:hover {
+        background-color: #0B0F10;
+        border: 1px solid #0B0F10;
+
+        span {
+            color: white;
+        }
+    }
+
+    #zip:hover {
+        background-color: #DC493E;
+        border: 1px solid #DC493E;
+
+        span {
+            color: white;
+        }
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.text-nav {
+    color: #0866FF;
+    text-decoration: underline;
+    text-align: center;
+    margin: 50px 0px;
+
+}
+
+#about-me {
+    margin: 50px 0px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 300px;
+    }
+
+
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+
+    p {
+        width: 300px;
+    }
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .skills-div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        ul {
+            margin: 20px 0px;
+
+            i {
+                font-size: 100px;
+                border: 1px solid #ccc;
+                border-radius: 100%;
+                padding: 10px;
+                margin: 0px 10px;
+                cursor: pointer;
+
+
+                &:hover {
+                    background-color: #0866FF;
+                    color: #fff;
+                }
+            }
+
+            #java:hover {
+                background-color: #4E7896;
+
+            }
+
+            #js:hover {
+                background-color: #F7DF1D;
+
+            }
+
+            #python:hover {
+                background-color: #0866FF;
+            }
+
+            #html:hover {
+                background-color: #E8572F;
+
+            }
+
+            #css:hover {
+                background-color: #137BC4;
+
+            }
+        }
+
+        button {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                background-color: #0866FF;
+            }
+        }
+
+    }
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 50%;
+
+
+        .card-proj {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+            margin: 10px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                border-radius: 5px;
+            }
+
+        }
+
+    }
+
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0866FF;
+    width: 100%;
+    padding: 50px 0px;
+
+    img {
+        max-width: 200px;
+        cursor: pointer;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 600px;
+
+        h2 {
+            color: white;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #button {
+            background-color: #fff;
+            color: #0866FF;
+            width: 100%;
+
+            &:hover {
+                background-color: #ccc;
+
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+    }
+
+    #socialmedia-list {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 10px;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            i {
+                color: white;
+            }
+        }
+
+        .gmail:hover {
+            background-color: #DC4339;
+            border: 1px solid #DC4339
+        }
+
+        .whatsapp:hover {
+            background-color: #4AB040;
+            border: 1px solid #4AB040;
+        }
+
+        .linkedin:hover {
+            background-color: #126BC5;
+            border: 1px solid #126BC5;
+        }
+
+
+        .subir:hover {
+            background-color: #0B0F10;
+            border: 1px solid #0B0F10;
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #button {
+        width: 200px;
+        border: 1px solid #0866FF;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #0866FF;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #004fcf;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        margin: 50px 0px;
+
+        .header-about-me {
+
+            h1 {
+                font-size: 30px;
+                margin: 0px 5px ;
+            }
+
+            span {
+                color: #0866FF;
+            }
+
+        }
+
+
+        img {
+            width: 250px;
+            border-radius: 100%;
+            object-fit: cover;
+            margin: 00px 0px 30px 0px;
+
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+
+        #icons-header li {
+            border: 1px solid #0866FF;
+            border-radius: 3%;
+            display: flex;
+            align-items: center;
+            width: 120px;
+            padding: 10px;
+            cursor: pointer;
+            margin: 20px 5px;
+            color: black;
+
+            &:hover {
+                transform: translateY(-2px);
+                color: white;
+            }
+
+            span {
+                display: flex;
+                margin: 5px;
+            }
+
+        }
+
+        #linkedin:hover {
+            background-color: #126BC5;
+            border: 1px solid #126BC5;
+            color: white;
+        }
+
+        #github:hover {
+            background-color: #0B0F10;
+            border: 1px solid #0B0F10;
+            color: #0B0F10;
+        }
+
+        #zip:hover {
+            background-color: #DC493E;
+            border: 1px solid #DC493E;
+        }
+    }
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-nav {
+        color: #0866FF;
+        text-decoration: underline;
+        text-align: center;
+        margin: 50px 0px;
+
+    }
+
+    #about-me {
+        margin: 50px 0px;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 300px;
+        }
+
+
+    }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 50px;
+
+        p {
+            width: 300px;
+        }
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .skills-div {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        ul {
+            display: flex;
+            justify-content: start;
+            width: 50%;
+            overflow: scroll;
+            padding: 10px;
+
+            li {
+
+                i {
+                    font-size: 100px;
+                    border: 1px solid #ccc;
+                    border-radius: 100%;
+                    padding: 10px;
+                    margin: 0px 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #0866FF;
+                        color: #fff;
+                    }
+                }
+            }
+
+
+
+            #java:hover {
+                background-color: #4E7896;
+
+            }
+
+            #js:hover {
+                background-color: #F7DF1D;
+
+            }
+
+            #python:hover {
+                background-color: #0866FF;
+            }
+
+            #html:hover {
+                background-color: #E8572F;
+
+            }
+
+            #css:hover {
+                background-color: #137BC4;
+
+            }
+        }
+
+        button {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                background-color: #0866FF;
+            }
+        }
+
+    }
+
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cards {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .card-proj {
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 150px;
+                margin: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .contact {
+        display: flex;
+        background-color: #0866FF;
+        width: 100%;
+
+        img {
+            display: flex;
+            max-width: 30%;
+            cursor: pointer;
+        }
+
+        form {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            width: 50%;
+
+            li {
+                border: 1px solid #ccc;
+                border-radius: 12px;
+                padding: 10px;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                i {
+                    color: white;
+                }
+            }
+
+            .gmail:hover {
+                background-color: #DC4339;
+                border: 1px solid #DC4339
+            }
+
+            .whatsapp:hover {
+                background-color: #4AB040;
+                border: 1px solid #4AB040;
+            }
+
+            .linkedin:hover {
+                background-color: #126BC5;
+                border: 1px solid #126BC5;
+            }
+
+
+            .subir:hover {
+                background-color: #0B0F10;
+                border: 1px solid #0B0F10;
+            }
+        }
+    }
+}

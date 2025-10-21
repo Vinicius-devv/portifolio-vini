@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="css/portifolio.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <title>Vinicius.dev - portifólio</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+
+        <h2 id="text-nav">Vinicius</h2>
+
+        <ul>
+            <li><a href="#header">Página inicial</a></li>
+            <li><a href="#text-nav-aboutme">Sobre mim</a></li>
+            <li><a href="#text-nav-skills">Skills</a></li>
+            <li><a href="#text-nav-projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+
+    </nav>
+
+    <header id="header">
+
+        <div class="header-about-me">
+
+            <h1>Oi, sou o <span>Vinicius</span><br>
+                Desenvolvedor Web <br>
+                <span>Front-End</span>
+            </h1>
+
+            <ul id="icons-header">
+
+                <li title="Linkedin" id="linkedin"><i class="bi bi-linkedin"></i><span>Linkedin</span></li>
+
+                <li title="Github" id="github"><i class="bi bi-github"></i><span>Github</span></li>
+
+                <a href="" download="thumbfoto1.jpg">
+                    <li title="Baixar currículo" id="zip"><i class="bi bi-file-earmark-zip-fill"></i>
+                        <span>Curriculo</span>
+                    </li>
+                </a>
+            </ul>
+
+        </div>
+
+        <img src="img/466360351_2349332352086008_8810185832524225233_n.jpg" alt="">
+
+
+    </header>
+
+    <main>
+
+
+        <h1 class="text-nav" id="text-nav-aboutme">Sobre mim</h1>
+
+        <div class="about-me" id="about-me">
+
+            <img src="img/466360351_2349332352086008_8810185832524225233_n.jpg" alt="" id="photo-main">
+
+            <div class="about-text">
+
+                <h1>Sou o Vini.</h1>
+                <p>Me chamo <b>Vinicius, tenho 21 anos.</b> Gosto muito da área da <b>T.I.</b> Desde novo me entretia em
+                    saber mais sobre <b>programação,</b> pois achava muito interessante a área. Fiz projetos como
+                    desenvolvimento de jogos para mobile, pela <b>It's magic</b> que era uma <strong>Engine</strong> de
+                    <strong>Jogos Mobile</strong>, e nela usava linguagem em <b>Java.</b>
+                </p>
+            </div>
+
+        </div>
+
+        <h1 class="text-nav" id="text-nav-skills">Soft Skills</h1>
+
+
+        <div class="skills" id="skills">
+
+            <div class="skills-div" id="skills-div">
+
+                <h2 style="display: none;">Linguagens</h2>
+
+                <ul>
+                    <li onclick="javacourse()"><i class="lab la-java" id="java" title="Vizualizar certificado"></i></li>
+
+                    <li onclick="pycourse()"><i class="lab la-python" id="python" title="Vizualizar certificado"></i>
+                    </li>
+
+                    <li onclick="jscourse()"><i class="lab la-js-square" id="js" title="Vizualizar certificado"></i>
+                    </li>
+
+                    <li onclick="htmlcourse()"><i class="lab la-html5" id="html" title="Vizualizar certificado"></i>
+                    </li>
+
+                    <li onclick="csscourse()"><i class="lab la-css3-alt" id="css" title="Vizualizar certificado"></i>
+                    </li>
+
+                </ul>
+
+                <!--<h2>Complementares</h2>
+
+                <ul>
+
+                    <li onclick=""><i class="las la-language" id="language" title="Inglês básico"></i></li>
+
+                    <li onclick=""><i class="lab la-adobe" id="adobe" title="Inicante"></i>
+                    </li>
+
+                    <li onclick=""><i class="lab la-js-square" id="js" title="Vizualizar certificado"></i>
+                    </li>
+
+                    <li onclick=""><i class="lab la-html5" id="html" title="Vizualizar certificado"></i>
+                    </li>
+
+                    <li onclick=""><i class="lab la-css3-alt" id="css" title="Vizualizar certificado"></i>
+                    </li>-->
+
+                </ul>
+
+                <button onclick="error()">Baixar todos os certificados</button>
+
+            </div>
+
+
+        </div>
+
+        <h1 class="text-nav" id="text-nav-projects">Projetos</h1>
+
+        <div class="projects" id="projects">
+
+
+            <div class="cards">
+
+                <div class="card-proj">
+
+                    <img src="img/bolvfit.jpg" alt="" onclick="bolvfit()">
+
+
+                </div>
+
+                <div class="card-proj">
+
+                    <img src="img/logotipo barbearia simples preto branco.jpg" alt="" onclick="barber()">
+
+                </div>
+
+                <div class="card-proj">
+
+                    <img src="img/bolvieroutfit.jpg" alt="" onclick="bolvioutifit()">
+
+                </div>
+
+                <div class="card-proj">
+
+                    <img src="img/bolvierstudio2.jpg" alt="" onclick="bolvstudio()">
+
+                </div>
+                <div class="card-proj">
+
+                    <img src="img/bolvierfilm.jpg" alt="" onclick="bolvflix()">
+
+                </div>
+                <div class="card-proj">
+
+                    <img src="img/bvr.jpg" alt="" onclick="bvr()">
+
+                </div>
+                <div class="card-proj">
+
+                    <img src="img/DESIGN DE SOBRANCELHAS.jpg" alt="" onclick="designslr()">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="text-nav" id="text-nav-contact">Contato</h1>
+
+        <div class="contact" id="contact">
+
+            <img src="img/logo b4.jpg" alt="Imagem não encontrada" title="BolvierTeam">
+
+            <form action="#">
+
+                <h2>Entre em contato</h2>
+
+                <input type="text" placeholder="Seu nome" required>
+
+                <input type="email" placeholder="Seu email" required>
+
+                <textarea name="" id="" cols="" rows="" placeholder="Seu comentário" required></textarea>
+
+                <input type="submit" id="button">
+            </form>
+
+            <ul id="socialmedia-list">
+
+                <li class="whatsapp" id="socialmedia-cnt"><i class="bi bi-whatsapp"></i> Whatsapp</li>
+
+                <li class="gmail" id="gbtn"><i class="bi bi-envelope"></i> Gmail</li>
+
+                <li class="linkedin" id="socialmedia-cnt"><i class="bi bi-linkedin"></i> Linkedin</li>
+
+                <a href="#header" style="text-decoration: none;">
+                    <li class="subir" id="socialmedia-cnt"><i class="bi bi-arrow-up"></i> Subir</li>
+                </a>
+
+            </ul>
+
+        </div>
+
+        <!-- Estrutura do modal -->
+        <div class="modal" id="javacourse">
+
+            <div class="modal-content">
+
+                <img src="img/java.jpg" alt="" id="certificado">
+
+                <div class="couse-text">
+                    <h2>Java</h2>
+                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
+                            target="_blank">@Programming hub</a></p>
+
+                    <a href="" download id="button">Baixar arquivo</a>
+
+                    <a href="" id="fechar"> fechar</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="modal" id="pycourse">
+
+            <div class="modal-content">
+
+                <img src="img/certificadoPython - Copia (1).jpg" alt="" id="certificado">
+
+                <div class="couse-text">
+                    <h2>Python</h2>
+                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
+                            target="_blank">@Programming hub</a></p>
+
+                    <a href="" download id="button">Baixar arquivo</a>
+
+                    <a href="" id="fechar"> fechar</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="modal" id="jscourse">
+
+            <div class="modal-content">
+
+                <img src="img/js.jpg" alt="" id="certificado">
+
+                <div class="couse-text">
+                    <h2>Javascript</h2>
+                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
+                            target="_blank">@Programming hub</a></p>
+
+                    <a href="" download id="button">Baixar arquivo</a>
+
+                    <a href="" id="fechar"> fechar</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+</body>
+
+<script src="js/modal.js"></script>
+<script src="js/link.js"></script>
+
+<script>
+    document.getElementById('gbtn').addEventListener('click', () => {
+        const to = 'vinicoitinho555@gmail.com';
+        const subject = encodeURIComponent('Proposta...');
+        const body = encodeURIComponent('Olá!\n\nQuero falar com você sobre...');
+        const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+        window.open(url, '_blank', 'noopener');
+    });
+</script>
+
+<script>
+    function error() {
+
+        alert("infelizmente esta função está indisponível")
+    }
+</script>
+
+
+</html>
