@@ -10,6 +10,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+
 #button {
     width: 200px;
     border: 1px solid #0866FF;
@@ -199,70 +204,63 @@ main {
     align-items: center;
     flex-direction: column;
 
-    .skills-div {
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    ul {
+        margin: 20px 0px;
 
-        ul {
-            margin: 20px 0px;
-
-            i {
-                font-size: 100px;
-                border: 1px solid #ccc;
-                border-radius: 100%;
-                padding: 10px;
-                margin: 0px 10px;
-                cursor: pointer;
-
-
-                &:hover {
-                    background-color: #0866FF;
-                    color: #fff;
-                }
-            }
-
-            #java:hover {
-                background-color: #4E7896;
-
-            }
-
-            #js:hover {
-                background-color: #F7DF1D;
-
-            }
-
-            #python:hover {
-                background-color: #0866FF;
-            }
-
-            #html:hover {
-                background-color: #E8572F;
-
-            }
-
-            #css:hover {
-                background-color: #137BC4;
-
-            }
-        }
-
-        button {
-            width: 200px;
-            padding: 10px;
+        i {
+            font-size: 100px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 100%;
+            padding: 10px;
+            margin: 0px 10px;
             cursor: pointer;
 
+
             &:hover {
-                color: #fff;
                 background-color: #0866FF;
+                color: #fff;
             }
         }
 
+        #java:hover {
+            background-color: #4E7896;
+
+        }
+
+        #js:hover {
+            background-color: #F7DF1D;
+
+        }
+
+        #python:hover {
+            background-color: #0866FF;
+        }
+
+        #html:hover {
+            background-color: #E8572F;
+
+        }
+
+        #css:hover {
+            background-color: #137BC4;
+
+        }
     }
+
+    button {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: #0866FF;
+        }
+    }
+
 }
 
 .projects {
@@ -393,26 +391,56 @@ main {
     }
 }
 
+@media screen and (max-width: 600px) {
 
-@media (max-width: 600px) {
-
-    #button {
-        width: 200px;
-        border: 1px solid #0866FF;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #0866FF;
-        color: #fff;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #004fcf;
-        }
+    * {
+        box-sizing: border-box;
+        /*outline: 1px solid red;*/
     }
 
     nav {
         display: none;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+
+            a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background: #0866FF;
+                transition: width 0.3s ease;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 5px;
+
+        }
+
     }
 
     header {
@@ -422,50 +450,51 @@ main {
         justify-content: space-around;
         margin: 50px 0px;
 
-        .header-about-me {
-
-            h1 {
-                font-size: 30px;
-                margin: 0px 5px ;
-            }
-
-            span {
-                color: #0866FF;
-            }
-
+        h1 {
+            font-size: 30px;
         }
 
+        span {
+            color: #0866FF;
+        }
 
         img {
-            width: 250px;
+            max-width: 50%;
+            height: auto;
             border-radius: 100%;
             object-fit: cover;
-            margin: 00px 0px 30px 0px;
 
             &:hover {
                 transform: scale(1.01);
             }
         }
 
-        #icons-header li {
-            border: 1px solid #0866FF;
-            border-radius: 3%;
-            display: flex;
-            align-items: center;
-            width: 120px;
-            padding: 10px;
-            cursor: pointer;
-            margin: 20px 5px;
-            color: black;
+        ul {
 
-            &:hover {
-                transform: translateY(-2px);
-                color: white;
+            a {
+                text-decoration: none;
+                color: black;
             }
 
-            span {
+            li {
+                border: 1px solid #0866FF;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 3%;
                 display: flex;
-                margin: 5px;
+                align-items: center;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    color: white;
+                }
+
+                span {
+                    display: flex;
+                    margin: 0px 0px;
+                    color: black;
+                }
+
             }
 
         }
@@ -473,18 +502,28 @@ main {
         #linkedin:hover {
             background-color: #126BC5;
             border: 1px solid #126BC5;
-            color: white;
+
+            span {
+                color: white;
+            }
         }
 
         #github:hover {
             background-color: #0B0F10;
             border: 1px solid #0B0F10;
-            color: #0B0F10;
+
+            span {
+                color: white;
+            }
         }
 
         #zip:hover {
             background-color: #DC493E;
             border: 1px solid #DC493E;
+
+            span {
+                color: white;
+            }
         }
     }
 
@@ -494,6 +533,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
     }
 
     .text-nav {
@@ -515,7 +555,8 @@ main {
         align-items: center;
 
         img {
-            width: 300px;
+            max-width: 100%;
+            height: auto;
         }
 
 
@@ -524,10 +565,11 @@ main {
     .about-text {
         display: flex;
         flex-direction: column;
-        margin: 20px 50px;
+        margin: 0px 0px;
 
         p {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
         }
     }
 
@@ -535,40 +577,34 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .skills-div {
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
+        flex-direction: column;
+        width: 100%;
 
         ul {
-            display: flex;
-            justify-content: start;
-            width: 50%;
-            overflow: scroll;
-            padding: 10px;
+            margin: 20px 0px;
+            width: 100%;
+            overflow-x: scroll;
 
-            li {
-
-                i {
-                    font-size: 100px;
-                    border: 1px solid #ccc;
-                    border-radius: 100%;
-                    padding: 10px;
-                    margin: 0px 10px;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #0866FF;
-                        color: #fff;
-                    }
-                }
+            &::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
             }
 
+            i {
+                font-size: 80px;
+                border: 1px solid #ccc;
+                border-radius: 100%;
+                padding: 10px;
+                margin: 0px 0px;
+                cursor: pointer;
+                flex-shrink: 0;
 
+
+                &:hover {
+                    background-color: #0866FF;
+                    color: #fff;
+                }
+            }
 
             #java:hover {
                 background-color: #4E7896;
@@ -614,20 +650,25 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
 
         .cards {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+
 
             .card-proj {
                 display: flex;
                 flex-wrap: wrap;
                 border: 1px solid #ccc;
                 border-radius: 5px;
-                width: 150px;
-                margin: 5px;
+                width: 40%;
+                margin: 10px;
                 cursor: pointer;
 
                 &:hover {
@@ -636,7 +677,8 @@ main {
 
                 img {
                     object-fit: cover;
-                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
                     border-radius: 5px;
                 }
 
@@ -648,22 +690,30 @@ main {
 
     .contact {
         display: flex;
+        justify-content: space-around;
+        align-items: center;
         background-color: #0866FF;
         width: 100%;
+        padding: 50px 0px;
 
         img {
-            display: flex;
-            max-width: 30%;
+            max-width: 20%;
             cursor: pointer;
         }
 
         form {
             display: none;
+            width: 100%;
+            max-width: 600px;
         }
 
-        ul {
-            display: flex;
-            width: 50%;
+        #socialmedia-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
 
             li {
                 border: 1px solid #ccc;
@@ -702,4 +752,5 @@ main {
             }
         }
     }
+
 }

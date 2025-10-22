@@ -48,18 +48,7 @@
                 <span>Front-End</span>
             </h1>
 
-            <ul id="icons-header">
 
-                <li title="Linkedin" id="linkedin"><i class="bi bi-linkedin"></i><span>Linkedin</span></li>
-
-                <li title="Github" id="github"><i class="bi bi-github"></i><span>Github</span></li>
-
-                <a href="" download="thumbfoto1.jpg">
-                    <li title="Baixar currículo" id="zip"><i class="bi bi-file-earmark-zip-fill"></i>
-                        <span>Curriculo</span>
-                    </li>
-                </a>
-            </ul>
 
         </div>
 
@@ -94,51 +83,25 @@
 
         <div class="skills" id="skills">
 
-            <div class="skills-div" id="skills-div">
+            <ul>
+                <li onclick="javacourse()"><i class="lab la-java" id="java" title="Vizualizar certificado"></i></li>
 
-                <h2 style="display: none;">Linguagens</h2>
+                <li onclick="pycourse()"><i class="lab la-python" id="python" title="Vizualizar certificado"></i>
+                </li>
 
-                <ul>
-                    <li onclick="javacourse()"><i class="lab la-java" id="java" title="Vizualizar certificado"></i></li>
+                <li onclick="jscourse()"><i class="lab la-js-square" id="js" title="Vizualizar certificado"></i>
+                </li>
 
-                    <li onclick="pycourse()"><i class="lab la-python" id="python" title="Vizualizar certificado"></i>
-                    </li>
+                <li onclick="htmlcourse()"><i class="lab la-html5" id="html" title="Vizualizar certificado"></i>
+                </li>
 
-                    <li onclick="jscourse()"><i class="lab la-js-square" id="js" title="Vizualizar certificado"></i>
-                    </li>
+                <li onclick="csscourse()"><i class="lab la-css3-alt" id="css" title="Vizualizar certificado"></i>
+                </li>
 
-                    <li onclick="htmlcourse()"><i class="lab la-html5" id="html" title="Vizualizar certificado"></i>
-                    </li>
 
-                    <li onclick="csscourse()"><i class="lab la-css3-alt" id="css" title="Vizualizar certificado"></i>
-                    </li>
+            </ul>
 
-                </ul>
-
-                <!--<h2>Complementares</h2>
-
-                <ul>
-
-                    <li onclick=""><i class="las la-language" id="language" title="Inglês básico"></i></li>
-
-                    <li onclick=""><i class="lab la-adobe" id="adobe" title="Inicante"></i>
-                    </li>
-
-                    <li onclick=""><i class="lab la-js-square" id="js" title="Vizualizar certificado"></i>
-                    </li>
-
-                    <li onclick=""><i class="lab la-html5" id="html" title="Vizualizar certificado"></i>
-                    </li>
-
-                    <li onclick=""><i class="lab la-css3-alt" id="css" title="Vizualizar certificado"></i>
-                    </li>-->
-
-                </ul>
-
-                <button onclick="error()">Baixar todos os certificados</button>
-
-            </div>
-
+            <button onclick="error()">Baixar todos os certificados</button>
 
         </div>
 
@@ -214,14 +177,14 @@
 
             <ul id="socialmedia-list">
 
-                <li class="whatsapp" id="socialmedia-cnt"><i class="bi bi-whatsapp"></i> Whatsapp</li>
+                <li class="whatsapp" id="socialmedia-cnt"><i class="bi bi-whatsapp"></i> <span>Whatsapp</span></li>
 
-                <li class="gmail" id="gbtn"><i class="bi bi-envelope"></i> Gmail</li>
+                <li class="gmail" id="gbtn"><i class="bi bi-envelope"></i> <span>Gmail</span></li>
 
-                <li class="linkedin" id="socialmedia-cnt"><i class="bi bi-linkedin"></i> Linkedin</li>
+                <li class="linkedin" id="socialmedia-cnt"><i class="bi bi-linkedin"></i> <span>Linkedin</span></li>
 
                 <a href="#header" style="text-decoration: none;">
-                    <li class="subir" id="socialmedia-cnt"><i class="bi bi-arrow-up"></i> Subir</li>
+                    <li class="subir" id="socialmedia-cnt"><i class="bi bi-arrow-up"></i> <span>Subir</span></li>
                 </a>
 
             </ul>
@@ -229,74 +192,21 @@
         </div>
 
         <!-- Estrutura do modal -->
-        <div class="modal" id="javacourse">
 
+        <div id="javacourse" class="modal">
             <div class="modal-content">
-
-                <img src="img/java.jpg" alt="" id="certificado">
-
-                <div class="couse-text">
-                    <h2>Java</h2>
-                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
-                            target="_blank">@Programming hub</a></p>
-
-                    <a href="" download id="button">Baixar arquivo</a>
-
-                    <a href="" id="fechar"> fechar</a>
-                </div>
-
-
+                <span id="fechar" class="close">&times;</span>
+                <h2>Olá 👋</h2>
+                <p>Este é um modal simples feito com HTML, CSS e JS!</p>
+                <button id="fechar">fechar</button>
             </div>
-
         </div>
-        <div class="modal" id="pycourse">
-
-            <div class="modal-content">
-
-                <img src="img/certificadoPython - Copia (1).jpg" alt="" id="certificado">
-
-                <div class="couse-text">
-                    <h2>Python</h2>
-                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
-                            target="_blank">@Programming hub</a></p>
-
-                    <a href="" download id="button">Baixar arquivo</a>
-
-                    <a href="" id="fechar"> fechar</a>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="modal" id="jscourse">
-
-            <div class="modal-content">
-
-                <img src="img/js.jpg" alt="" id="certificado">
-
-                <div class="couse-text">
-                    <h2>Javascript</h2>
-                    <p>Curso concluído em 2023 com 00 Horas de duração pela <a href="https://programminghub.io"
-                            target="_blank">@Programming hub</a></p>
-
-                    <a href="" download id="button">Baixar arquivo</a>
-
-                    <a href="" id="fechar"> fechar</a>
-                </div>
-
-
-            </div>
-
-        </div>
-
-
 
     </main>
 
 </body>
 
-<script src="js/modal.js"></script>
+<!--<script src="js/modal.js"></script>-->
 <script src="js/link.js"></script>
 
 <script>
