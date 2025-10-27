@@ -264,39 +264,22 @@ main {
 }
 
 .projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px auto auto;
+    gap: 10px;
 
-    .cards {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 50%;
+    img {
+        width: 100%;
+        border-radius: 5px;
+        margin: 10px;
+        border: 1px solid #E8F0Fb;
+        cursor: pointer;
 
-
-        .card-proj {
-            display: flex;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 250px;
-            margin: 10px;
-            cursor: pointer;
-
-            &:hover {
-                box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-            }
-
-            img {
-                object-fit: cover;
-                width: 100%;
-                border-radius: 5px;
-            }
-
+        &:hover {
+            border: 1px solid #4C6EC0;
+            ;
         }
-
     }
 
 }
@@ -395,7 +378,12 @@ main {
 
     * {
         box-sizing: border-box;
-        /*outline: 1px solid red;*/
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     nav {
@@ -647,43 +635,22 @@ main {
     }
 
     .projects {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 0.32fr));
+        grid-template-rows: 120px 120px auto auto;
+        gap: 5px;
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        /* padding: 10px; */
+        overflow-x: hidden;
+        /* impede que ultrapasse horizontalmente */
 
-        .cards {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-
-
-            .card-proj {
-                display: flex;
-                flex-wrap: wrap;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                width: 40%;
-                margin: 10px;
-                cursor: pointer;
-
-                &:hover {
-                    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-                }
-
-                img {
-                    object-fit: cover;
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 5px;
-                }
-
-            }
-
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
 
     }
@@ -752,5 +719,4 @@ main {
             }
         }
     }
-
 }

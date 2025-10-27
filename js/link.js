@@ -1,39 +1,39 @@
 
-function bolvfit(){
+// function bolvfit(){
 
-    window.open("", "_blank")
+//     window.open("", "_blank")
 
-}
+// }
 
-function barber(){
+// function barber(){
 
-    window.open("", "_blank")
+//     window.open("", "_blank")
 
-}
+// }
 
-function bolvioutifit(){
+// function bolvioutifit(){
 
-    window.open("", "_blank")
+//     window.open("", "_blank")
 
-}
+// }
 
-function bolvstudio(){
+// function bolvstudio(){
 
-    window.open("", "_blank")
+//     window.open("", "_blank")
 
-}
+// }
 
-function bolvflix(){
+// function bolvflix(){
 
-    window.open("", "_blank")
+//     window.open("", "_blank")
 
-}
+// }
 
-function bvr(){
+// function bvr(){
 
-    window.open("https://vinicius-devv.github.io/paineldecontrole/", "_blank");
+//     window.open("https://vinicius-devv.github.io/paineldecontrole/", "_blank");
 
-}
+// }
 
 function designslr(){
 
