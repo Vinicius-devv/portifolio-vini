@@ -29,14 +29,14 @@
 
 // }
 
-// function bvr(){
+function bvr(){
 
-//     window.open("https://vinicius-devv.github.io/paineldecontrole/", "_blank");
+    window.open("https://vinicius-devv.github.io/paineldecontrole/", "_blank");
 
-// }
-
-function designslr(){
-
-    window.open("", "_blank")
-    
 }
+
+// function designslr(){
+
+//     window.open("", "_blank")
+    
+// }
